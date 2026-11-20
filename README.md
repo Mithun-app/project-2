@@ -1,6 +1,6 @@
 # First Project
 
-A small, responsive landing page to kick off your first GitHub project.
+A responsive portfolio starter with project filters and a saved light/dark theme.
 
 ## Run it
 
@@ -8,8 +8,10 @@ Open `index.html` in your browser. There are no dependencies or build steps.
 
 ## Make it yours
 
-- Update the text and links in `index.html`.
+- Replace the sample bio, project names, descriptions, and contact email in `index.html`.
+- Open `button.html` to view the standalone “go fo it” button.
+- Update the GitHub link to your repository.
 - Change colors and layout in `styles.css`.
-- Add interactions in `script.js`.
+- Adjust project categories and interactions in `script.js`.
 
 Have fun, and remember to commit your changes as you go!

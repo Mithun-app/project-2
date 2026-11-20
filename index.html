@@ -4,8 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#f6f4ef" />
-    <meta name="description" content="A small, friendly starting point for your first project on GitHub." />
-    <title>First Project — A fresh start</title>
+    <meta name="description" content="A personal portfolio starter for projects, experiments, and ideas in progress." />
+    <title>First Project — Portfolio starter</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -14,17 +14,23 @@
   <body>
     <header class="topbar">
       <a class="brand" href="#top" aria-label="First Project home"><span class="brand-mark">✳</span> first project</a>
-      <a class="github-link" href="https://github.com" target="_blank" rel="noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme" title="Toggle theme"><span aria-hidden="true">◐</span></button>
+        <a class="github-link" href="https://github.com" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+      </div>
     </header>
 
     <main id="top">
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-copy">
-          <p class="eyebrow"><span class="status-dot"></span> YOUR NEXT BIG THING STARTS HERE</p>
-          <h1 id="hero-title">Every great idea<br />starts with <em>hello.</em></h1>
-          <p class="intro">This is your little corner of the internet. A place to experiment, learn as you go, and turn “what if?” into something real.</p>
-          <button class="start-button" id="start-button" type="button">Let’s get started <span aria-hidden="true">↗</span></button>
-          <p class="hint" id="button-hint" aria-live="polite">One small step is still a step.</p>
+          <p class="eyebrow"><span class="status-dot"></span> DESIGNER · BUILDER · CURIOUS HUMAN</p>
+          <h1 id="hero-title">Making ideas<br />feel <em>real.</em></h1>
+          <p class="intro">A small portfolio for the things I’m making, learning, and figuring out. This is where the first version begins.</p>
+          <a class="start-button" href="#work">Explore my work <span aria-hidden="true">↓</span></a>
+          <a class="extra-button" href="button.html">go fo it <span aria-hidden="true">↗</span></a>
         </div>
         <div class="art" aria-label="Abstract illustration of a bright new idea" role="img">
           <div class="sun"></div>
@@ -38,21 +44,44 @@
         </div>
       </section>
 
-      <section class="next-section" id="next" aria-labelledby="next-title">
-        <div>
-          <p class="eyebrow">THE GOOD PART</p>
-          <h2 id="next-title">Make it yours.</h2>
+      <section class="work-section" id="work" aria-labelledby="work-title">
+        <div class="section-heading">
+          <div><p class="eyebrow">SELECTED PROJECTS · 2026</p><h2 id="work-title">A few things<br />in the works<span class="accent-dot">.</span></h2></div>
+          <p class="section-note">A collection of experiments and ideas. Some are finished, some are still growing.</p>
         </div>
-        <p class="next-copy">Change the words. Try a new color. Add something you care about. The best first project is the one that feels like <em>you.</em></p>
-        <div class="steps" aria-label="Three ways to begin">
-          <article class="step"><span class="step-number">01</span><h3>Explore</h3><p>Look around the files and see how the pieces fit together.</p></article>
-          <article class="step"><span class="step-number">02</span><h3>Experiment</h3><p>Make a change, refresh the page, and see what happens.</p></article>
-          <article class="step"><span class="step-number">03</span><h3>Share</h3><p>Commit your work and let someone else see what you made.</p></article>
+        <div class="filters" role="group" aria-label="Filter projects">
+          <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All <span>03</span></button>
+          <button class="filter-button" type="button" data-filter="web" aria-pressed="false">Web <span>02</span></button>
+          <button class="filter-button" type="button" data-filter="playground" aria-pressed="false">Playground <span>01</span></button>
+        </div>
+        <div class="project-grid">
+          <article class="project-card" data-category="web">
+            <a class="project-visual visual-notes" href="#contact" aria-label="Ask me about Tiny Notes"><div class="browser-bar"><i></i><i></i><i></i><span>tiny-notes.app</span></div><div class="note-paper"><span>MONDAY, 9:41 AM</span><b>A little space<br />to think.</b><small>Capture a thought.<br />Come back to it later.</small><div class="note-mark">＋</div></div><span class="visual-index">01 / WEB</span></a>
+            <div class="project-meta"><div><h3>Tiny Notes</h3><p>A calm home for passing thoughts and small ideas.</p></div><a class="arrow-link" href="#contact" aria-label="Ask about Tiny Notes">↗</a></div>
+          </article>
+          <article class="project-card" data-category="web">
+            <a class="project-visual visual-garden" href="#contact" aria-label="Ask me about Fieldwork"><div class="garden-sun"></div><div class="garden-arch"></div><div class="garden-stem stem-a"></div><div class="garden-stem stem-b"></div><div class="garden-leaf leaf-a"></div><div class="garden-leaf leaf-b"></div><div class="garden-leaf leaf-c"></div><span class="garden-title">fieldwork<br /><i>grow at your pace</i></span><span class="visual-index">02 / WEB</span></a>
+            <div class="project-meta"><div><h3>Fieldwork</h3><p>A friendly garden journal for noticing the seasons.</p></div><a class="arrow-link" href="#contact" aria-label="Ask about Fieldwork">↗</a></div>
+          </article>
+          <article class="project-card" data-category="playground">
+            <a class="project-visual visual-shapes" href="#contact" aria-label="Ask me about Shape Studies"><div class="shape shape-circle"></div><div class="shape shape-square"></div><div class="shape shape-ring"></div><div class="shape shape-line"></div><span class="shape-copy">SHAPE<br />STUDIES<br /><small>VOL. 01</small></span><span class="visual-index">03 / PLAYGROUND</span></a>
+            <div class="project-meta"><div><h3>Shape Studies</h3><p>A daily exercise in color, form, and happy accidents.</p></div><a class="arrow-link" href="#contact" aria-label="Ask about Shape Studies">↗</a></div>
+          </article>
         </div>
       </section>
+
+      <section class="about-section" id="about" aria-labelledby="about-title">
+        <div>
+          <p class="eyebrow">A LITTLE ABOUT ME</p>
+          <h2 id="about-title">Curiosity is<br />my compass<span class="accent-dot">.</span></h2>
+        </div>
+        <div class="about-copy"><p>I like making useful things that feel good to use. Right now, I’m learning by building little projects, trying new tools, and sharing what I find along the way.</p><div class="current-focus"><span class="status-dot"></span><span>Currently exploring</span><b>creative coding & interaction</b></div></div>
+      </section>
+
+      <section class="contact-section" id="contact" aria-labelledby="contact-title"><div><p class="eyebrow">HAVE A GOOD ONE?</p><h2 id="contact-title">Let’s make<br /><em>something.</em></h2></div><a class="contact-link" href="mailto:hello@example.com">Say hello <span>↗</span></a></section>
     </main>
 
-    <footer><span>YOUR FIRST PROJECT</span><span>THE BEGINNING OF SOMETHING <b>✳</b></span></footer>
+    <footer><span>YOUR FIRST PROJECT · 2026</span><span>BUILT WITH CURIOSITY <b>✳</b></span></footer>
     <script src="script.js"></script>
   </body>
 </html>
